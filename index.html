@@ -2,7 +2,7 @@
 <html>
 <head><meta charset="utf-8" />
 
-<title>temp-165265111172868023</title>
+<title>temp-16526518057344574</title>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
@@ -13124,7 +13124,7 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Can-we-use-machine-learning-classifications-to-reliably-classify-Spotify-songs-by-type-of-popularity?">Can we use machine learning classifications to reliably classify Spotify songs by type of popularity?<a class="anchor-link" href="#Can-we-use-machine-learning-classifications-to-reliably-classify-Spotify-songs-by-type-of-popularity?">&#182;</a></h1><p>Spotify is perhaps the most widely recognized streaming service available. It’s wide catalogue of songs and ease of accessibility make it the first choice for music enthusiast. One of the more innovative features of Spotify is its abilities to allow users to create and share their own public playlists with the community. However, Spotify additionally creates and curates their own playlists to share with the community. Two of these playlists are Spotify’s “Viral Top 50” and “Top 200”. As you might have guessed the “Top 200” playlist is an amalgamation of the top 200 most streamed songs at any given moment. The “Viral Top 50” however is a bit more ambiguous. According to a Spotify employee’s response in a post on the Spotify forums, “the Viral 50 chart has been created to measure the success of music in terms of user sharing combining analytics on blogs, social media etc”.</p>
+<h1 id="Can-we-use-Machine-Learning-Classifications-to-Reliably-Classify-Spotify-Songs-by-Type-of-Popularity?">Can we use Machine Learning Classifications to Reliably Classify Spotify Songs by Type of Popularity?<a class="anchor-link" href="#Can-we-use-Machine-Learning-Classifications-to-Reliably-Classify-Spotify-Songs-by-Type-of-Popularity?">&#182;</a></h1><p>Spotify is perhaps the most widely recognized streaming service available. It’s wide catalogue of songs and ease of accessibility make it the first choice for music enthusiast. One of the more innovative features of Spotify is its abilities to allow users to create and share their own public playlists with the community. However, Spotify additionally creates and curates their own playlists to share with the community. Two of these playlists are Spotify’s “Viral Top 50” and “Top 200”. As you might have guessed the “Top 200” playlist is an amalgamation of the top 200 most streamed songs at any given moment. The “Viral Top 50” however is a bit more ambiguous. According to a Spotify employee’s response in a post on the Spotify forums, “the Viral 50 chart has been created to measure the success of music in terms of user sharing combining analytics on blogs, social media etc”.</p>
 <p>Additionally, Spotify analyzes songs to discern their “features” and using their own libraries, Spotify allows developers to access these songs features using their "Spotipy" python library. These features include “acousticness”, “danceability”, tempo, energy etc. More will be discussed about these features later. For this reason, I thought it would be fascinating to use these audio features Spotify has collected and use machine learning classification algorithms to attempt to classify songs as belonging to either the “Viral 50” or “Top 200” playlist. Is it even possible to discern a difference between “viral” songs and top songs? What classification algorithm would be optimal? Our human intuition would have us believe that the most viral songs would be indistinguishable from the top songs. If our classification is at all successful, it begs the question to what extent can a songs virality and popularity be quantified based on its auditory characteristics.</p>
 
 </div>
@@ -13132,55 +13132,13 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-python"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">spotipy</span>
 </pre></div>
 
     </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>Collecting spotipy
-  Downloading spotipy-2.19.0-py3-none-any.whl (27 kB)
-Collecting urllib3&gt;=1.26.0
-  Downloading urllib3-1.26.9-py2.py3-none-any.whl (138 kB)
-     |████████████████████████████████| 138 kB 17.6 MB/s 
-Requirement already satisfied: six&gt;=1.15.0 in /usr/local/lib/python3.7/dist-packages (from spotipy) (1.15.0)
-Collecting requests&gt;=2.25.0
-  Downloading requests-2.27.1-py2.py3-none-any.whl (63 kB)
-     |████████████████████████████████| 63 kB 1.8 MB/s 
-Requirement already satisfied: certifi&gt;=2017.4.17 in /usr/local/lib/python3.7/dist-packages (from requests&gt;=2.25.0-&gt;spotipy) (2021.10.8)
-Requirement already satisfied: charset-normalizer~=2.0.0 in /usr/local/lib/python3.7/dist-packages (from requests&gt;=2.25.0-&gt;spotipy) (2.0.12)
-Requirement already satisfied: idna&lt;4,&gt;=2.5 in /usr/local/lib/python3.7/dist-packages (from requests&gt;=2.25.0-&gt;spotipy) (2.10)
-Installing collected packages: urllib3, requests, spotipy
-  Attempting uninstall: urllib3
-    Found existing installation: urllib3 1.24.3
-    Uninstalling urllib3-1.24.3:
-      Successfully uninstalled urllib3-1.24.3
-  Attempting uninstall: requests
-    Found existing installation: requests 2.23.0
-    Uninstalling requests-2.23.0:
-      Successfully uninstalled requests-2.23.0
-<span class="ansi-red-fg">ERROR: pip&#39;s dependency resolver does not currently take into account all the packages that are installed. This behaviour is the source of the following dependency conflicts.
-google-colab 1.0.0 requires requests~=2.23.0, but you have requests 2.27.1 which is incompatible.
-datascience 0.10.6 requires folium==0.2.1, but you have folium 0.8.3 which is incompatible.</span>
-Successfully installed requests-2.27.1 spotipy-2.19.0 urllib3-1.26.9
-</pre>
-</div>
-</div>
-
 </div>
 </div>
 
