@@ -2,7 +2,7 @@
 <html>
 <head><meta charset="utf-8" />
 
-<title>temp-165265248311047317</title>
+<title>temp-165265309182651359</title>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
@@ -13297,9 +13297,9 @@ Number of viral50 songs 672098
 <div class="prompt input_prompt">In&nbsp;[6]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-python"><pre><span></span><span class="c1">#Get 100000 random samples from viral50 and top200 and store them in new dataframe</span>
-<span class="n">top200_sample</span> <span class="o">=</span> <span class="n">top200_df</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span><span class="n">n</span><span class="o">=</span><span class="mi">100000</span><span class="p">)</span>
-<span class="n">viral50_sample</span> <span class="o">=</span> <span class="n">viral50_df</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span><span class="n">n</span><span class="o">=</span><span class="mi">100000</span><span class="p">)</span>
+<div class=" highlight hl-python"><pre><span></span><span class="c1">#Get 50000 random samples from viral50 and top200 and store them in new dataframe</span>
+<span class="n">top200_sample</span> <span class="o">=</span> <span class="n">top200_df</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span><span class="n">n</span><span class="o">=</span><span class="mi">50000</span><span class="p">)</span>
+<span class="n">viral50_sample</span> <span class="o">=</span> <span class="n">viral50_df</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span><span class="n">n</span><span class="o">=</span><span class="mi">50000</span><span class="p">)</span>
 
 <span class="c1">#Append dataframe together</span>
 <span class="n">top100000</span> <span class="o">=</span> <span class="n">top200_sample</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">viral50_sample</span><span class="p">)</span>
