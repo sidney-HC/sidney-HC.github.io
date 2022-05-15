@@ -13548,7 +13548,7 @@ Number of viral50 songs 672098
 <span class="n">sp</span> <span class="o">=</span> <span class="n">spotipy</span><span class="o">.</span><span class="n">Spotify</span><span class="p">(</span><span class="n">client_credentials_manager</span> <span class="o">=</span> <span class="n">client_credentials_managerMan</span><span class="p">)</span>
 
 <span class="c1">#Simply do a sample request to figure out the structure of our dataframe</span>
-<span class="n">element</span> <span class="o">=</span> <span class="n">top200000</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">1</span><span class="p">)[</span><span class="s2">&quot;url&quot;</span><span class="p">]</span>
+<span class="n">element</span> <span class="o">=</span> <span class="n">top100000</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">1</span><span class="p">)[</span><span class="s2">&quot;url&quot;</span><span class="p">]</span>
 <span class="n">firstTrack</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">audio_features</span><span class="p">(</span><span class="n">element</span><span class="p">)</span>
 <span class="c1">#sp.audio_features returns an array of 1 element</span>
 <span class="k">print</span><span class="p">(</span><span class="n">firstTrack</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span>
